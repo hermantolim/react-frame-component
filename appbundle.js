@@ -30887,7 +30887,7 @@
 	      if (this.props.mountTarget) {
 	        return doc.querySelector(this.props.mountTarget);
 	      }
-	      return doc.body.children ? doc.body.children[0] : undefined;
+	      return doc && doc.body && doc.body.children ? doc.body.children[0] : undefined;
 	    }
 	
 	    // In certain situations on a cold cache DOMContentLoaded never gets called
