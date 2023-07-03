@@ -1,6 +1,6 @@
 {
-  "name": "react-frame-component",
-  "version": "5.2.6",
+  "name": "react-frame-component-alt",
+  "version": "5.2.6-alpha",
   "description": "React component to wrap your application or component in an iFrame for encapsulation purposes",
   "main": "lib/index.js",
   "files": [
