@@ -71,7 +71,9 @@ export class Frame extends Component {
     if (this.props.mountTarget) {
       return doc.querySelector(this.props.mountTarget);
     }
-    return doc.body.children ? doc.body.children[0] : undefined;
+    return doc && doc.body && doc.body.children
+      ? doc.body.children[0]
+      : undefined;
   }
 
   setRef = node => {
@@ -128,9 +130,11 @@ export class Frame extends Component {
 
     const mountTarget = this.getMountTarget();
 
+    console.log('mountTarget', mountTarget);
+
     return [
       ReactDOM.createPortal(this.props.head, this.getDoc().head),
-      mountTarget ? ReactDOM.createPortal(contents, mountTarget) : undefined
+      mountTarget ? ReactDOM.createPortal(contents, mountTarget) : null
     ];
   }
 
