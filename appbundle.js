@@ -30929,7 +30929,9 @@
 	
 	      var mountTarget = this.getMountTarget();
 	
-	      return [_reactDom2.default.createPortal(this.props.head, this.getDoc().head), mountTarget ? _reactDom2.default.createPortal(contents, mountTarget) : undefined];
+	      console.log('mountTarget', mountTarget);
+	
+	      return [_reactDom2.default.createPortal(this.props.head, this.getDoc().head), mountTarget ? _reactDom2.default.createPortal(contents, mountTarget) : null];
 	    }
 	  }, {
 	    key: 'render',
