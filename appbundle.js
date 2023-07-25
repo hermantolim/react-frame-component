@@ -30929,7 +30929,7 @@
 	
 	      var mountTarget = this.getMountTarget();
 	
-	      console.log('mountTarget', mountTarget);
+	      //console.log('mountTarget', mountTarget);
 	
 	      return [_reactDom2.default.createPortal(this.props.head, this.getDoc().head), mountTarget ? _reactDom2.default.createPortal(contents, mountTarget) : null];
 	    }
